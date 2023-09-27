@@ -1,0 +1,25 @@
+{
+  "name": "restaurantpage_odin",
+  "version": "1.0.0",
+  "description": "Restaurant Page Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1\"",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Torenrob/restaurantPage_odin.git"
+  },
+  "author": "Toren Robinson <torentremaine@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Torenrob/restaurantPage_odin/issues"
+  },
+  "homepage": "https://github.com/Torenrob/restaurantPage_odin#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
