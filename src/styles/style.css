@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "OpenSans";
+	src: url(../../assets/fonts/opensans-variablefont_wdthwght-webfont.woff)
+			format("woff"),
+		url(../../assets/fonts/opensans-variablefont_wdthwght-webfont.woff2)
+			format("woff2");
+}
+
+@font-face {
+	font-family: "OpenSansItalic";
+	src: url(../../assets/fonts/opensans-italic-variablefont_wdthwght-webfont.woff)
+			format(woff),
+		url(../../assets/fonts/opensans-italic-variablefont_wdthwght-webfont.woff2)
+			format(woff2);
+}
+
+body {
+	background-color: rgba(30, 94, 94, 0.685);
+}
+
+main {
+	background-color: rgb(30, 94, 94);
+	font-family: "OpenSans";
+}
+
+header {
+	font-family: "OpenSansItalic";
+	height: 100%;
+}
