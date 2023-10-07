@@ -1,5 +1,5 @@
 {
-  "name": "restaurantpage_odin",
+  "name": "restaurant-page",
   "version": "1.0.0",
   "description": "Restaurant Page Odin Project",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Torenrob/restaurantPage_odin.git"
+    "url": "git+ssh://git@github.com/Torenrob/restaurant-page.git"
   },
   "author": "Toren Robinson <torentremaine@outlook.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Torenrob/restaurantPage_odin/issues"
+    "url": "https://github.com/Torenrob/restaurant-page/issues"
   },
-  "homepage": "https://github.com/Torenrob/restaurantPage_odin#readme",
+  "homepage": "https://github.com/Torenrob/restaurant-page#readme",
   "devDependencies": {
     "css-loader": "^6.8.1",
     "style-loader": "^3.3.3",
