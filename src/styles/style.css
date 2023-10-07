@@ -14,16 +14,103 @@
 			format(woff2);
 }
 
+@font-face {
+	font-family: "cookie";
+	src: url(../../assets/fonts/Cookie-Regular.ttf) format(truetype);
+}
+
 body {
-	background-color: rgba(30, 94, 94, 0.685);
+	background-color: #0d0c0c;
+	background-size: 100vh;
+	height: 100vh;
+	color: white;
+	display: grid;
+	grid-template-rows: 0.5fr 3.5fr;
+	overflow: hidden;
 }
 
 main {
-	background-color: rgb(30, 94, 94);
-	font-family: "OpenSans";
+	width: 100%;
 }
 
-header {
-	font-family: "OpenSansItalic";
+nav {
+	font-size: 30px;
+	width: 15vw;
+}
+
+nav > ul {
+	display: flex;
+	height: 25vh;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+nav > ul > li {
+	text-align: right;
+}
+
+#title {
+	display: flex;
+	font-family: "cookie";
+	font-size: 40px;
+	margin: 0;
+	justify-content: center;
+	padding-top: 10px;
+	filter: drop-shadow(-10px 16px 12px black);
+}
+
+#menuList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	height: 100%;
+	padding-bottom: 100px;
+	padding-left: 250px;
+	align-content: space-around;
+	list-style: none;
+}
+
+.menuImages {
+	position: relative;
+	z-index: 1;
+	border-radius: 5px;
+	filter: brightness(40%);
+	transition: 1000ms;
+}
+
+.itemTitles {
+	position: relative;
+	bottom: 50%;
+	right: -30%;
+	word-wrap: normal;
+	z-index: 2;
+	font-family: "OpenSansItalic";
+	font-weight: bolder;
+	font-size: 25px;
+}
+.menuImages:hover {
+	filter: brightness(100%);
+	transform: scale(110%);
+	transition: 1000ms;
+}
+
+.opacity {
+	opacity: 0.2;
+	transition: 1000ms;
+}
+
+#navAndContentContainer {
+	display: flex;
+}
+
+#backgroundImgContainer {
+	position: absolute;
+	justify-self: center;
+	box-shadow: 25px -25px 10px 0 #0d0c0c inset, -25px -200px 10px 0 #0d0c0c inset;
+}
+
+#backgroundImg {
+	position: relative;
+	justify-self: center;
+	height: 100vh;
+	z-index: -1;
 }

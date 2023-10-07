@@ -72,7 +72,8 @@ time,
 mark,
 audio,
 video,
-h3 {
+h3,
+h1 {
 	margin: 0;
 	padding: 0;
 	border: 0;

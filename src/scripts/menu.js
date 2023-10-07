@@ -5,7 +5,10 @@ import img3 from "../../assets/images/images4.jpeg";
 import img4 from "../../assets/images/images5.jpeg";
 import img5 from "../../assets/images/images6.jpeg";
 
-export default function menu() {
+export const menuItemImgs = [];
+export const menuItems = [];
+
+const menu = () => {
 	//Get content area of page
 	const content = document.getElementById("content");
 
@@ -42,24 +45,39 @@ export default function menu() {
 
 	//Create image elements for menu list
 	const images = [img0, img1, img2, img3, img4, img5];
-	const menuItemImgs = [];
 	for (let i = 0; i < images.length; i++) {
-		menuItemImgs[i] = pageElement("img", "menuImages", null, null, images[i]);
+		menuItemImgs[i] = pageElement(
+			"img",
+			"menuImages",
+			`menuImg${i}`,
+			null,
+			images[i]
+		);
 	}
 
 	//Create list items for menue
 	const dishes = [
-		"Meze platter",
-		"Hummus with pita bread",
-		"Falafel sandwich",
-		"Grilled fish with lemon and herbs",
-		"Pasta with tomato sauce and basil",
+		"Meze Platter",
+		"Hummus with Pita Bread",
+		"Falafel Sandwich",
+		"Grilled Fish with Lemon and Herbs",
+		"Pasta with Tomato Sauce and Basil",
 		"Baklava",
 	];
-	const menuItems = [];
 	for (let i = 0; i < dishes.length; i++) {
-		menuItems[i] = pageElement("li", "menuItem", null, dishes[i]);
+		menuItems[i] = pageElement("li", "menuItem", null, menuItemImgs[i]);
+		dishes[i] = pageElement("span", "itemTitles", `itemTitle${i}`, dishes[i]);
+		menuItems[i].append(dishes[i]);
 	}
+
+	menuItemImgs.forEach((image) => {
+		image.addEventListener("mouseover", (x) => {
+			dishes[x.target.id[x.target.id.length - 1]].classList.add("opacity");
+		});
+		image.addEventListener("mouseleave", (x) => {
+			dishes[x.target.id[x.target.id.length - 1]].classList.remove("opacity");
+		});
+	});
 
 	//Create UL for menu
 	const menuUl = pageElement("ul", null, "menuList", "");
@@ -69,7 +87,7 @@ export default function menu() {
 		menuUl.append(item);
 	});
 
-	console.log(menuItems);
-	console.log(menuUl);
 	content.appendChild(menuUl);
-}
+};
+
+export default menu;
