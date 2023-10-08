@@ -31,49 +31,66 @@ body {
 
 main {
 	width: 100%;
+	z-index: 2;
 }
 
 nav {
 	font-size: 30px;
-	width: 15vw;
+	width: 10vw;
 }
 
 nav > ul {
 	display: flex;
-	height: 25vh;
+	height: 20vh;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
 nav > ul > li {
 	text-align: right;
+	font-family: "OpenSans";
+	box-shadow: 0px 1px white;
+	transition: 1500ms;
+	cursor: pointer;
+}
+
+nav > ul > li:hover {
+	transform: scale(110%);
+	transition: 1500ms;
+}
+
+nav > ul > li:active {
+	transform: scale(110%);
+	transition: 1500ms;
+	cursor: pointer;
 }
 
 #title {
 	display: flex;
 	font-family: "cookie";
-	font-size: 40px;
+	font-size: 50px;
 	margin: 0;
 	justify-content: center;
 	padding-top: 10px;
 	filter: drop-shadow(-10px 16px 12px black);
+	z-index: 2;
 }
 
 #menuList {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	height: 100%;
-	padding-bottom: 100px;
-	padding-left: 250px;
+	height: 80%;
+	padding-left: 470px;
 	align-content: space-around;
 	list-style: none;
+	width: 75%;
 }
 
 .menuImages {
 	position: relative;
 	z-index: 1;
 	border-radius: 5px;
-	filter: brightness(40%);
+	filter: brightness(40%) drop-shadow(-10px 16px 12px black);
 	transition: 1000ms;
 }
 
@@ -94,7 +111,7 @@ nav > ul > li {
 }
 
 .opacity {
-	opacity: 0.2;
+	opacity: 0;
 	transition: 1000ms;
 }
 
@@ -105,7 +122,7 @@ nav > ul > li {
 #backgroundImgContainer {
 	position: absolute;
 	justify-self: center;
-	box-shadow: 25px -25px 10px 0 #0d0c0c inset, -25px -200px 10px 0 #0d0c0c inset;
+	box-shadow: 25px -25px 5px 0 #0d0c0c inset, -25px -200px 5px 0 #0d0c0c inset;
 }
 
 #backgroundImg {
@@ -113,4 +130,40 @@ nav > ul > li {
 	justify-self: center;
 	height: 100vh;
 	z-index: -1;
+}
+
+.homeEls {
+	width: 43.5%;
+	margin-left: 23%;
+}
+
+#homeHeader {
+	font-size: 45px;
+	margin-bottom: 25px;
+	margin-top: 20px;
+	text-align: center;
+	filter: drop-shadow(-10px 16px 12px black);
+}
+
+#homePara {
+	font-size: 25px;
+	background-color: #0d0c0c88;
+	border-radius: 7px;
+	padding: 15px;
+}
+
+#map {
+	height: 400px;
+	width: 400px;
+	position: relative;
+	left: 620px;
+	top: 70px;
+	border-radius: 5px;
+}
+
+#phoneAndLoc {
+	font-size: 25px;
+	position: relative;
+	left: 650px;
+	top: 50px;
 }
