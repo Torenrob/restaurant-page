@@ -6,7 +6,7 @@ export default function contactPage() {
 	let map = document.createElement("div");
 	map.setAttribute("id", "map");
 	const loader = new Loader({
-		apiKey: "AIzaSyCj3Uvw24dSbtQjMCVmbtSrFeK337CiFmI",
+		apiKey: process.env.GMAPS_API,
 		version: "weekly",
 	});
 	loader.load().then(async () => {
